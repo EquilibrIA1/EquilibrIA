@@ -3,175 +3,276 @@
   margin: 0;
   padding: 0;
 }
-
 body {
   font-family: Arial, Helvetica, sans-serif;
-  background-color: #f8fafc;
-  color: #1e293b;
+  background-color: #ffffff;
+  color: #111827;
   line-height: 1.5;
 }
-
 header {
-  background-color: #ffffff;
-  padding: 15px 6%;
+  max-width: 1160px;
+  margin: 0 auto;
+  padding: 18px 24px;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #e2e8f0;
+  gap: 20px;
 }
-
 header img {
-  height: 36px;
+  height: 34px;
   width: auto;
 }
-
 header nav {
   display: flex;
   align-items: center;
-  gap: 20px;
+  gap: 28px;
 }
-
 header ul {
   list-style: none;
   display: flex;
-  gap: 20px;
+  align-items: center;
+  gap: 24px;
 }
-
 header li {
-  cursor: pointer;
-  color: #64748b;
+  font-size: 14px;
   font-weight: bold;
+  color: #4b5563;
+  cursor: pointer;
 }
-
+header li:first-child {
+  color: #4f46e5;
+}
 header li:hover {
-  color: #2563eb;
+  color: #4f46e5;
 }
-
 button {
-  background: linear-gradient(90deg, #2563eb, #2dd4bf);
+  background-color: #635bff;
   color: #ffffff;
-  border: none;
-  padding: 10px 18px;
-  border-radius: 8px;
+  border: 1px solid #635bff;
+  padding: 10px 20px;
+  border-radius: 999px;
+  font-size: 14px;
   font-weight: bold;
   cursor: pointer;
 }
-
-button:hover {
-  opacity: 0.9;
+button: hover {
+  background-color: #4f46e5;
 }
-
 #hero {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 35px;
-  background-color: #ffffff;
-  border-radius: 16px;
-  text-align: center;
+  max-width: 1160px;
+  margin: 30px auto 60px;
+  padding: 20px 24px;
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  align-items: center;
+  gap: 32px;
 }
-
+#hero h3,
+#hero h2,
+#hero p,
+#hero button {
+  grid-column: 1;
+}
 #hero h3 {
-  font-size: 13px;
-  color: #2563eb;
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #635bff;
   margin-bottom: 10px;
 }
-
 #hero h2 {
-  font-size: 34px;
-  margin-bottom: 12px;
+  font-size: 40px;
+  line-height: 1.15;
+  color: #111827;
+  margin-bottom: 14px;
 }
-
 #hero p {
-  color: #64748b;
-  max-width: 600px;
-  margin: 0 auto 20px;
+  font-size: 15px;
+  color: #6b7280;
+  max-width: 460px;
+  margin-bottom: 24px;
 }
-
-#hero img {
-  max-width: 320px;
-  height: auto;
-  margin: 20px auto 0;
-  border-radius: 12px;
+#hero button {
+  width: fit-content;
+  display: inline-block;
+  margin-right: 10px;
 }
-
-#Benefits,
-#Reviews {
-  max-width: 1000px;
-  margin: 50px auto;
-  padding: 0 20px;
+#hero button:nth-of-type(2) {
+  background-color: #ffffff;
+  color: #4f46e5;
+  border: 1px solid #c7d2fe;
+}
+#hero img[src*="equilibriaFondo1"] {
+  grid-column: 2;
+  grid-row: 1 / 6;
+  width: 100%;
+  max-height: 360px;
+  object-fit: cover;
+  border-radius: 16px;
+}
+#hero img[src*="equilibriaLogo"] {
+  display: none;
+}
+#Benefits {
+  max-width: 1160px;
+  margin: 60px auto;
+  padding: 0 24px;
   text-align: center;
 }
-
-#Benefits h2,
-#Reviews h2 {
+#Benefits h3 {
+  font-size: 12px;
+  letter-spacing: 1px;
+  color: #4f46e5;
+  margin-bottom: 8px;
+}
+#Benefits h2 {
   font-size: 28px;
-  margin: 8px 0 25px;
+  color: #111827;
+  margin-bottom: 32px;
 }
-
-.cards {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
+#Benefits nav {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 18px;
 }
-
-.card {
+#Benefits nav nav {
+  display: block;
   background-color: #ffffff;
-  border: 1px solid #e2e8f0;
-  border-top: 4px solid #2dd4bf;
+  border: 1px solid #e5e7eb;
   border-radius: 12px;
   padding: 20px;
-  width: 260px;
   text-align: left;
+  min-width: 0;
+  box-shadow: 0 4px 14px rgba(17, 24, 39, 0.04);
 }
-
-#Benefits h4,
-#Reviews h5 {
-  margin-bottom: 6px;
+#Benefits nav nav h4,
+#Benefits nav nav p {
+  display: block;
+  width: 100%;
+  max-width: 100%;
 }
-
-#Benefits p,
-#Reviews p {
-  color: #64748b;
+#Benefits nav nav h4 {
+  font-size: 16px;
+  color: #111827;
+  margin-bottom: 8px;
+}
+#Benefits nav nav p {
   font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
 }
-
-#Reviews img {
-  max-width: 90px;
-  height: auto;
-  margin-top: 10px;
+#Reviews {
+  max-width: 1160px;
+  margin: 60px auto;
+  padding: 0 24px;
 }
-
-footer {
-  background-color: #1e293b;
-  color: #ffffff;
-  text-align: center;
-  padding: 30px 20px;
-  margin-top: 50px;
+#Reviews h4 {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: #4f46e5;
+  margin-bottom: 8px;
 }
-
-footer img {
-  height: 28px;
-  width: auto;
-  margin: 8px 5px;
-  display: inline-block;
+#Reviews h2 {
+  font-size: 26px;
+  color: #111827;
+  margin-bottom: 28px;
 }
-
-footer h5 {
+#Reviews nav {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+#Reviews nav nav {
+  display: block;
+  background-color: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 12px;
+  padding: 20px;
+  min-width: 0;
+  box-shadow: 0 4px 14px rgba(17, 24, 39, 0.04);
+}
+#Reviews nav nav img:first-child {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  object-fit: cover;
+  float: left;
+  margin-right: 12px;
+  margin-bottom: 8px;
+}
+#Reviews nav nav p {
+  font-size: 13px;
+  color: #374151;
+  margin-bottom: 10px;
+}
+#Reviews nav nav h5 {
+  font-size: 13px;
+  font-weight: bold;
+  color: #111827;
+}
+#Reviews nav nav h6 {
+  font-size: 12px;
   font-weight: normal;
-  font-size: 14px;
-  margin-top: 8px;
+  color: #6b7280;
+  margin-bottom: 8px;
 }
-
-@media (max-width: 700px) {
+#Reviews nav nav img:last-child {
+  height: 16px;
+  width: auto;
+}
+footer {
+  background-color: #091326;
+  color: #ffffff;
+  padding: 24px 6%;
+  margin-top: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 16px;
+}
+footer img {
+  height: 24px;
+  width: auto;
+  display: inline-block;
+  margin-right: 8px;
+}
+footer h5 {
+  font-size: 12px;
+  font-weight: normal;
+  color: #cbd5e1;
+}
+@media (max-width: 900px) {
+  #hero {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+  #hero p,
+  #hero button {
+    margin-inline: auto;
+  }
+  #hero img[src*="equilibriaFondo1"] {
+    grid-column: 1;
+    grid-row: auto;
+  }
+  #Benefits nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  #Reviews nav {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 600px) {
   header,
   header nav,
   header ul {
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
   }
-
-  #hero h2 {
-    font-size: 26px;
+  #Benefits nav {
+    grid-template-columns: 1fr;
+  }
+  footer {
+    flex-direction: column;
+    text-align: center;
   }
 }
